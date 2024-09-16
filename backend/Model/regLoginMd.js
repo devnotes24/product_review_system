@@ -23,6 +23,10 @@ const regLoginSchema = new mongoose.Schema({
     type: String,
     default: 'student',
   },
+  isAdmin: {
+    type: String,
+    default: 'false',
+  },
 });
 
 // Pre-save hook to hash password before saving

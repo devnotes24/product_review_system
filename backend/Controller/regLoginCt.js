@@ -6,10 +6,10 @@ const createUserModel = require('../Model/regLoginMd');
 
 exports.register = async (req, res) => {
   const User = createUserModel(req.globalDB);
-  const { name, lastName , email , password } = req.body;
+  const { name, lastName , email , password ,isAdmin} = req.body;
   console.log(name);
   try {
-    const user = new User({ name, lastName , email ,password });
+    const user = new User({ name, lastName , email ,password ,isAdmin});
     await user.save();
 
     res.status(201).json({ success: 'User registered successfully' });
@@ -41,6 +41,7 @@ exports.login = async (req, res) => {
     res.json({
       success: 'Successfully logged in',
       token, // Send the token in the response
+      user
     });
   } catch (error) {
     res.status(500).json({ error: 'Server error' });
