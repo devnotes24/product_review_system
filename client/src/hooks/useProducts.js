@@ -36,11 +36,11 @@ export function useProducts() {
     onSuccess: () => {
       queryClient.invalidateQueries(queryKey);
 
-      toast.success("Product updated successfully");
+      toast.success("Rmarks added successfully");
     },
     onError: (error) => {
-      console.error('Error in updating Product:', error.response?.data || error.message);
-      toast.error("Error in updating Product");
+      console.error('Error in adding remarks:', error.response?.data || error.message);
+      toast.error("Error in adding remarks");
     },
   });
 
