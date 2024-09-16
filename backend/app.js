@@ -10,7 +10,7 @@ const route = require('./routes/routes');
 
 const app = express();
 const allowedOrigins = [
-  'https://waste-disposal.vercel.app',
+  'https://product-review-system-ochre.vercel.app',
   'http://localhost:3000',
 ];
 

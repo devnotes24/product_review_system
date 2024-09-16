@@ -54,12 +54,12 @@ export async function updateProduct(id, updatedData) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     if (response.data.error) {
-      console.error('Failed to update the products:', response.data.error);
+      console.error('Failed to add remsrks:', response.data.error);
       throw new Error(response.data.error);
     }
     return response.data;
   } catch (error) {
-    console.error('There was an error updating the product:', error);
+    console.error('There was an error adding remarks:', error);
     throw error;
   }
 }
