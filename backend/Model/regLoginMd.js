@@ -19,10 +19,6 @@ const regLoginSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  role: {
-    type: String,
-    default: 'student',
-  },
   isAdmin: {
     type: String,
     default: 'false',
